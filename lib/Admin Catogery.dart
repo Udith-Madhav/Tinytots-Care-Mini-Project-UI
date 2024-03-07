@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mini_project/Babysitter%20Login.dart';
-import 'package:flutter_mini_project/Doctor%20Login.dart';
+import 'package:flutter_mini_project/Admin%20Login.dart';
 import 'package:flutter_mini_project/Login.dart';
-import 'package:flutter_mini_project/Parent%20Login.dart';
 
-class Catogery extends StatefulWidget {
-  const Catogery({super.key});
+class Adcatogery extends StatefulWidget {
+  const Adcatogery({super.key});
 
   @override
-  State<Catogery> createState() => _CatogeryState();
+  State<Adcatogery> createState() => _AdcatogeryState();
 }
 
-class _CatogeryState extends State<Catogery> {
+class _AdcatogeryState extends State<Adcatogery> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -56,9 +54,7 @@ class _CatogeryState extends State<Catogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Parent()));
-                  },
+                  onPressed: () {},
                  child: Text('Parents',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -89,9 +85,7 @@ class _CatogeryState extends State<Catogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>BsitterLogin()));
-                  },
+                  onPressed: () {},
                  child: Text('Babysitters',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -122,9 +116,7 @@ class _CatogeryState extends State<Catogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorLogin()));
-                  },
+                  onPressed: () {},
                  child: Text('Doctors',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -136,18 +128,62 @@ class _CatogeryState extends State<Catogery> {
               )
             ),
 
-          Container(
-            width: 320,
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.call),
-                SizedBox(width: 5,),
-                Text("Childline Number: 1098")
-              ],
+            Container(
+              width:320,
+              height: 104,
+              decoration: BoxDecoration(
+                border: Border.all(color: const Color.fromARGB(255, 227, 219, 219)),
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment(0.8, 1),
+                  colors: <Color>[
+                    Color(0xFF61EDDC),
+                    Color(0xFFFFFFFF)
+                  ]
+                )
+              ),
+              child: Center(
+                child: TextButton(
+                  style: ButtonStyle(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
+                  ),
+                  onPressed: () {},
+                 child: Text('Activity',
+                 style: TextStyle(
+                  fontFamily: 'GravitasOne',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                 ),
+                 )),
+              )
             ),
-          )
+
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF4ACB57)
+              ),
+              onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Adlogin()));
+            },
+            child: Row(
+              mainAxisSize:MainAxisSize.min,children: [
+                Text('Logout',
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+                ),
+                SizedBox(width: 5,),
+                Icon(
+                  Icons.logout,
+                  size: 15,
+                  color: Colors.black,
+                )
+              ] ,
+            ), 
+            )
           ],
         ),
       ),

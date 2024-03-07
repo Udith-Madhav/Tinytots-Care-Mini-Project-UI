@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Admin%20Catogery.dart';
+import 'package:flutter_mini_project/Admin%20Login.dart';
 import 'package:flutter_mini_project/Login.dart';
 
 class FrontPage extends StatefulWidget {
@@ -9,6 +11,7 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+  bool showButton =false;
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -74,6 +77,41 @@ class _FrontPageState extends State<FrontPage> {
                         ),
                     ),
                   ),
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          showButton=true;
+                        });
+                      },
+                      icon: Icon(Icons.more_vert)
+                    ),
+                    if(showButton)
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFC4C4C4),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                          side: BorderSide(color: Colors.black)
+                        )
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Adlogin()));
+                      }, 
+                      child: Text('Admin',
+                      style: TextStyle(
+                        fontFamily: 'inter',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black
+                      ),
+                      )
+                    )
+                  ],
                 )
               ],
             ),
