@@ -90,7 +90,18 @@ flutter:
         - asset: fonts/GravitasOne-Regular.ttf
     - family: Inter
       fonts:
-        - asset: fonts/Inter-VariableFont_slnt,wght.ttf    
+        - asset: fonts/Inter-VariableFont_slnt,wght.ttf
+    - family: IrishGrover
+      fonts:
+        - asset: fonts/IrishGrover-Regular.ttf
+    - family: InriaSerif
+      fonts:
+        - asset: fonts/InriaSerif-Bold.ttf
+        # - asset: fonts/InriaSerif-BoldItalic.ttf 
+        # - asset: fonts/InriaSerif-Italic.ttf 
+        # - asset: fonts/InriaSerif-Light.ttf
+        # - asset: fonts/InriaSerif-LightItalic.ttf 
+        # - asset: fonts/InriaSerif-Regular.ttf         
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
