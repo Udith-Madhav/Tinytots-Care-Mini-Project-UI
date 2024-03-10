@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Booking%20Success.dart';
 
 class Dbooking2 extends StatefulWidget {
   const Dbooking2({super.key});
@@ -245,7 +246,9 @@ class _Dbooking2State extends State<Dbooking2> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF98B7D3)
               ),
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Sbooking()));
+              }, 
               child: Text('Book Appointment',style: TextStyle(fontWeight: FontWeight.w700,fontSize: 16,color: Color(0xFF000000)),)
             ),
           )

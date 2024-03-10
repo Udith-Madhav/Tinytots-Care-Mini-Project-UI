@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mini_project/Category.dart';
-import 'package:flutter_mini_project/Forgot%20Password.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class Dlogin extends StatefulWidget {
+  const Dlogin({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<Dlogin> createState() => _DloginState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _DloginState extends State<Dlogin> {
   final _formKey =GlobalKey<FormState>();
   final _formkey2 =GlobalKey<FormState>();
   @override
@@ -106,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     TextButton(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Password()));
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Password()));
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.black,
@@ -129,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   onPressed: () {
                     if(_formKey.currentState!.validate() && _formkey2.currentState!.validate() ){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
                     }
                   },
                  child: Text('Login',style: TextStyle(color: Colors.black),)),
@@ -138,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 25,),
 
               TextButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
               },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.black,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/Category.dart';
+import 'package:flutter_mini_project/Doctor.dart';
+import 'package:flutter_mini_project/Food.dart';
 import 'package:flutter_mini_project/Staff.dart';
 
 class Phome extends StatefulWidget {
@@ -113,7 +115,9 @@ class _PhomeState extends State<Phome> {
                         style: ButtonStyle(
                           overlayColor: MaterialStateProperty.all(Colors.transparent),
                         ),
-                        onPressed: () {}, 
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Pfood()));
+                        }, 
                         child: Text('FOOD',
                           style: TextStyle(
                             fontFamily: 'IrishGrover',
@@ -187,7 +191,9 @@ class _PhomeState extends State<Phome> {
                         style: ButtonStyle(
                           overlayColor: MaterialStateProperty.all(Colors.transparent),
                         ),
-                        onPressed: () {}, 
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Pdoctor()));
+                        }, 
                         child: Text('DOCTORS',
                           style: TextStyle(
                             fontFamily: 'IrishGrover',

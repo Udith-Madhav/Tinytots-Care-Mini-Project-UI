@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mini_project/PLogin.dart';
+import 'package:flutter_mini_project/Category.dart';
+import 'package:flutter_mini_project/Forgot%20Password.dart';
+import 'package:flutter_mini_project/Parent%20Home.dart';
+import 'package:flutter_mini_project/Parent%20Login.dart';
 
-class Password extends StatefulWidget {
-  const Password({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<Password> createState() => _PasswordState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _PasswordState extends State<Password> {
+class _LoginScreenState extends State<LoginScreen> {
   final _formKey =GlobalKey<FormState>();
   final _formkey2 =GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
@@ -34,17 +39,17 @@ class _PasswordState extends State<Password> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('New Password'),
+                      Text('Email'),
                 
                       SizedBox(height: 5,),
                 
                       TextFormField(
                         validator: (value){
                           if(value!.isEmpty){
-                            return 'Please Enter New Password';
+                            return 'Please Enter an Email Address';
                           }
-                          else if(value.length<8){
-                            return 'Password must be atleast 8 characters';
+                          else if(!RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$').hasMatch(value)){
+                            return 'Please Enter Valid Email Address';
                           }
                           return null;
                         },
@@ -52,6 +57,7 @@ class _PasswordState extends State<Password> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8)
                           ),
+                          hintText: 'Email'
                         ),
                       )
                     ],
@@ -69,7 +75,7 @@ class _PasswordState extends State<Password> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Conform Password'),
+                      Text('Password'),
                 
                       SizedBox(height: 5,),
                 
@@ -78,8 +84,8 @@ class _PasswordState extends State<Password> {
                           if(value!.isEmpty){
                             return "Enter the Password";
                           }
-                          else if(value != value){
-                            return 'Enter the same password';
+                          else if(value.length<8){
+                            return 'Password must be atleast 8 characters';
                           }
                           return null;
                         },
@@ -87,6 +93,7 @@ class _PasswordState extends State<Password> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8)
                           ),
+                          hintText: 'Password'
                         ),
                       )
                     ],
@@ -94,8 +101,24 @@ class _PasswordState extends State<Password> {
                 ),
               ),
 
+              Container(
+                width: 300,
+                // height: 30,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Password()));
+                    },
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.black,
+                    ), 
+                    child:Text('Forgot Password?')),
+                  ],
+                )
+              ),
 
-              SizedBox(height: 30,),
+              SizedBox(height: 40,),
 
               SizedBox(
                 height: 48,
@@ -108,13 +131,21 @@ class _PasswordState extends State<Password> {
                   ),
                   onPressed: () {
                     if(_formKey.currentState!.validate() && _formkey2.currentState!.validate() ){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Phome()));
                     }
                   },
-                 child: Text('Done',style: TextStyle(color: Colors.black),)),
+                 child: Text('Login',style: TextStyle(color: Colors.black),)),
               ),
 
-              
+              SizedBox(height: 25,),
+
+              TextButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+              },
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.black,
+                    ), 
+                    child:Text('Create Account?')),
             ],
           ),
         ),

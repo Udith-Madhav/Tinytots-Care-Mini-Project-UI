@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Parent%20Login%20Second.dart';
 
 class Parent extends StatefulWidget {
   const Parent({super.key});
@@ -167,7 +168,9 @@ class _ParentState extends State<Parent> {
                       width: 82,
                       height: 48,
                       child: ElevatedButton(
-                          onPressed: () {}, 
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>ParentSecond()));
+                          }, 
                           child: Text('Next',style: TextStyle(color: Colors.white),),
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(

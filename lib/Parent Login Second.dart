@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/PLogin.dart';
 
 class ParentSecond extends StatefulWidget {
   const ParentSecond({super.key});
@@ -291,7 +292,9 @@ class _ParentSecondState extends State<ParentSecond> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF5E5BFF)
               ),
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+              }, 
               child: Text('Submit',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
