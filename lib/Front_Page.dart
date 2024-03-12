@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/Admin%20Catogery.dart';
 import 'package:flutter_mini_project/Admin%20Login.dart';
+import 'package:flutter_mini_project/Main%20Login.dart';
 import 'package:flutter_mini_project/PLogin.dart';
 
 class FrontPage extends StatefulWidget {
@@ -65,7 +66,7 @@ class _FrontPageState extends State<FrontPage> {
 
                         ),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MainLogin()));
                         }, 
                         child: Text('Start',style: 
                         TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/DLogin.dart';
 
 class DoctorLogin extends StatefulWidget {
   const DoctorLogin({super.key});
@@ -178,7 +179,9 @@ class _DoctorLoginState extends State<DoctorLogin> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF5E5BFF)
               ),
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Dlogin()));
+              }, 
               child: Text('Submit',
               style: TextStyle(
                 fontWeight: FontWeight.w400,

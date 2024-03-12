@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Bbaysitter%20Home.dart';
 
 class Bprofile extends StatefulWidget {
   const Bprofile({super.key});
@@ -10,8 +11,8 @@ class Bprofile extends StatefulWidget {
 class _BprofileState extends State<Bprofile> {
   int indexNumber=0;
   List tabWidget =[
-    Text("HOME",style: TextStyle(fontSize: 30),),
-    Text("PROFILE",style: TextStyle(fontSize: 30),),
+    Bhome(),
+    Bprofile(),
   ];
   @override
   Widget build(BuildContext context) {

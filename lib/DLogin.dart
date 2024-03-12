@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Category.dart';
+import 'package:flutter_mini_project/Main%20Doctor.dart';
 
 class Dlogin extends StatefulWidget {
   const Dlogin({super.key});
@@ -127,7 +129,7 @@ class _DloginState extends State<Dlogin> {
                   ),
                   onPressed: () {
                     if(_formKey.currentState!.validate() && _formkey2.currentState!.validate() ){
-                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Maindoctor()));
                     }
                   },
                  child: Text('Login',style: TextStyle(color: Colors.black),)),
@@ -136,7 +138,7 @@ class _DloginState extends State<Dlogin> {
               SizedBox(height: 25,),
 
               TextButton(onPressed: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
               },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.black,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/BabySitter%20Activity.dart';
 import 'package:flutter_mini_project/Babysitter%20Menu.dart';
+import 'package:flutter_mini_project/Babysitter%20Profile.dart';
 import 'package:flutter_mini_project/My%20Children.dart';
 
 class Bhome extends StatefulWidget {
@@ -13,8 +14,8 @@ class Bhome extends StatefulWidget {
 class _BhomeState extends State<Bhome> {
   int indexNumber=0;
   List tabWidget =[
-    Text("HOME",style: TextStyle(fontSize: 30),),
-    Text("PROFILE",style: TextStyle(fontSize: 30),),
+    Bhome(),
+    Bprofile(),
   ];
   @override
   Widget build(BuildContext context) {

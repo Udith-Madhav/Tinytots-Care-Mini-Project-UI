@@ -208,7 +208,9 @@ class _MaindoctorState extends State<Maindoctor> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF98B7D3)
                         ),
-                        onPressed: () {}, 
+                        onPressed: () {
+                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                        }, 
                         child: Text('Approve',style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Colors.white),)
                       ),
                 

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Admin%20Activity.dart';
+import 'package:flutter_mini_project/Admin%20Babysitter.dart';
+import 'package:flutter_mini_project/Admin%20Doctor.dart';
 import 'package:flutter_mini_project/Admin%20Login.dart';
+import 'package:flutter_mini_project/Admin%20Parent.dart';
 import 'package:flutter_mini_project/PLogin.dart';
 
 class Adcatogery extends StatefulWidget {
@@ -54,7 +58,9 @@ class _AdcatogeryState extends State<Adcatogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminParent()));
+                  },
                  child: Text('Parents',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -85,7 +91,9 @@ class _AdcatogeryState extends State<Adcatogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminBabysitter()));
+                  },
                  child: Text('Babysitters',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -116,7 +124,9 @@ class _AdcatogeryState extends State<Adcatogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminDoctor()));
+                  },
                  child: Text('Doctors',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',
@@ -147,7 +157,9 @@ class _AdcatogeryState extends State<Adcatogery> {
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminActivity()));
+                  },
                  child: Text('Activity',
                  style: TextStyle(
                   fontFamily: 'GravitasOne',

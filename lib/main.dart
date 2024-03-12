@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Admin%20Activity.dart';
+import 'package:flutter_mini_project/Admin%20Babysitter.dart';
 import 'package:flutter_mini_project/Admin%20Catogery.dart';
+import 'package:flutter_mini_project/Admin%20Doctor.dart';
+import 'package:flutter_mini_project/Admin%20Parent%202.dart';
+import 'package:flutter_mini_project/Admin%20Parent.dart';
 import 'package:flutter_mini_project/BabySitter%20Activity.dart';
 import 'package:flutter_mini_project/Babysitter%20Login.dart';
 import 'package:flutter_mini_project/Babysitter%20Menu.dart';
@@ -40,7 +45,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FrontPage(),
+      home: AdminPerent2(),
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Bbaysitter%20Home.dart';
+import 'package:flutter_mini_project/Category.dart';
 
 class Slogin extends StatefulWidget {
   const Slogin({super.key});
@@ -8,8 +10,8 @@ class Slogin extends StatefulWidget {
 }
 
 class _SloginState extends State<Slogin> {
-   final _formKey =GlobalKey<FormState>();
-   final _formkey2 =GlobalKey<FormState>();
+  final _formKey =GlobalKey<FormState>();
+  final _formkey2 =GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -127,7 +129,7 @@ class _SloginState extends State<Slogin> {
                   ),
                   onPressed: () {
                     if(_formKey.currentState!.validate() && _formkey2.currentState!.validate() ){
-                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Bhome()));
                     }
                   },
                  child: Text('Login',style: TextStyle(color: Colors.black),)),
@@ -136,7 +138,7 @@ class _SloginState extends State<Slogin> {
               SizedBox(height: 25,),
 
               TextButton(onPressed: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Catogery()));
               },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.black,
