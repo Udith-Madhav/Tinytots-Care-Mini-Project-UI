@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/Admin%20Catogery.dart';
+import 'package:flutter_mini_project/Admin%20Doctor2.dart';
 
 class AdminDoctor extends StatefulWidget {
   const AdminDoctor({super.key});
@@ -87,7 +88,9 @@ class _AdminDoctorState extends State<AdminDoctor> {
                             style: ButtonStyle(
                               overlayColor: MaterialStateProperty.all(Colors.transparent),
                             ),
-                            onPressed: () {}, 
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminDoctor2()));
+                            }, 
                             icon: Icon(Icons.edit,color: Colors.grey,size: 20,)
                           )
                         ],

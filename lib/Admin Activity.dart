@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/Admin%20Activity%20Add.dart';
 import 'package:flutter_mini_project/Admin%20Catogery.dart';
 
 class AdminActivity extends StatefulWidget {
@@ -31,7 +32,7 @@ class _AdminActivityState extends State<AdminActivity> {
                           begin: Alignment.topLeft,
                           end: Alignment(1, 1),
                           colors: <Color>[
-                           Color(0xFFE8C4E9),
+                           Color(0xFF61EDDC),
                            Color(0xFFFFFFFF),
                           ]
                         )
@@ -66,7 +67,9 @@ class _AdminActivityState extends State<AdminActivity> {
                                   borderRadius: BorderRadius.circular(0)
                                 )
                               ),
-                              onPressed: () {}, 
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Add()));
+                              }, 
                               child: Text('Add',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400,color: Colors.black),)
                             ),
                           ),
